@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Globals -->
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{add7d0f6-3781-4911-9831-acfb32b1051f}</ProjectGuid>
+    <RootNamespace>Template</RootNamespace>
+  </PropertyGroup>
+  <!-- Props -->
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(SolutionDir).build.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <!-- Items -->
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Foundation\concepts.hpp" />
+    <ClInclude Include="source\Foundation\constants.hpp" />
+    <ClInclude Include="source\Foundation\errors.hpp" />
+    <ClInclude Include="source\Foundation\Support\Internal\concepts.hpp" />
+    <ClInclude Include="source\Foundation\Support\narrow.ipp" />
+    <ClInclude Include="source\Foundation\types.hpp" />
+    <ClInclude Include="source\Foundation\Utility\what.ipp" />
+    <ClInclude Include="source\Foundation\_internal\Exception\Exception.ipp" />
+    <ClInclude Include="source\Foundation\_internal\Exception\Name.ipp" />
+    <ClInclude Include="source\Foundation\_internal\Exception\_internal\concepts.hpp" />
+    <ClInclude Include="source\Foundation\Utility\log.ipp" />
+    <ClInclude Include="source\pch.hpp" />
+  </ItemGroup>
+  <!-- Targets -->
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

@@ -1,0 +1,54 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Template++", "projects\Template++\Template++.vcxproj", "{ADD7D0F6-3781-4911-9831-ACFB32B1051F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D496856D-60C9-4BB2-A3E8-2D9116B31058}"
+	ProjectSection(SolutionItems) = preProject
+		.clang-format = .clang-format
+		.build.props = .build.props
+		.clang-tidy = .clang-tidy
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+		LICENSE.md = LICENSE.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Clang - Debug|ARM64 = Clang - Debug|ARM64
+		Clang - Debug|x64 = Clang - Debug|x64
+		Clang - Release|ARM64 = Clang - Release|ARM64
+		Clang - Release|x64 = Clang - Release|x64
+		MSVC - Debug|ARM64 = MSVC - Debug|ARM64
+		MSVC - Debug|x64 = MSVC - Debug|x64
+		MSVC - Release|ARM64 = MSVC - Release|ARM64
+		MSVC - Release|x64 = MSVC - Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.Clang - Debug|ARM64.ActiveCfg = Clang - Debug|ARM64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.Clang - Debug|ARM64.Build.0 = Clang - Debug|ARM64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.Clang - Debug|x64.ActiveCfg = Clang - Debug|x64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.Clang - Debug|x64.Build.0 = Clang - Debug|x64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.Clang - Release|ARM64.ActiveCfg = Clang - Release|ARM64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.Clang - Release|ARM64.Build.0 = Clang - Release|ARM64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.Clang - Release|x64.ActiveCfg = Clang - Release|x64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.Clang - Release|x64.Build.0 = Clang - Release|x64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.MSVC - Debug|ARM64.ActiveCfg = MSVC - Debug|ARM64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.MSVC - Debug|ARM64.Build.0 = MSVC - Debug|ARM64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.MSVC - Debug|x64.ActiveCfg = MSVC - Debug|x64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.MSVC - Debug|x64.Build.0 = MSVC - Debug|x64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.MSVC - Release|ARM64.ActiveCfg = MSVC - Release|ARM64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.MSVC - Release|ARM64.Build.0 = MSVC - Release|ARM64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.MSVC - Release|x64.ActiveCfg = MSVC - Release|x64
+		{ADD7D0F6-3781-4911-9831-ACFB32B1051F}.MSVC - Release|x64.Build.0 = MSVC - Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A5FF9D4-0EFA-4A50-99E1-C9920BC4A29B}
+	EndGlobalSection
+EndGlobal
