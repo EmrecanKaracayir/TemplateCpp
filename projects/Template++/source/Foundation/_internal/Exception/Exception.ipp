@@ -14,6 +14,8 @@
 
 namespace fn::_internal::Exception
 {
+  // NOLINTBEGIN(clang-diagnostic-ctad-maybe-unsupported)
+
   /**
    * @brief  A foundation class for exceptions.
    * @tparam name The name of the exception.
@@ -142,6 +144,8 @@ namespace fn::_internal::Exception
     *| [private]: Friends                                                     |*
     \*------------------------------------------------------------------------*/
 
+    // NOLINTBEGIN(bugprone-exception-escape)
+
     /**
      * @brief   Prints the exception to an output stream.
      * @param   os The output stream.
@@ -187,6 +191,9 @@ namespace fn::_internal::Exception
       // Return output stream
       return os;
     }
+
+    // NOLINTEND(bugprone-exception-escape)
+    // NOLINTEND(clang-diagnostic-ctad-maybe-unsupported)
   };
 } // namespace fn::_internal::Exception
 

@@ -52,11 +52,16 @@ namespace fn::Support
     // Static cast the value
     const auto castedValue{static_cast<To>(value)};
 
-    // Throw error if the value or sign changed
-    if (static_cast<From>(castedValue) != value
-        or (DIFFERENT_SIGNEDNESS and ((castedValue < To{}) != (value < From{}))))
+    // Throw error if the value changed
+    if (static_cast<From>(castedValue) != value)
     {
-      throw NarrowingError{};
+      throw NarrowingError{"Value mismatch"};
+    }
+
+    // Throw error if sign changed
+    if (DIFFERENT_SIGNEDNESS and ((castedValue < To{}) != (value < From{})))
+    {
+      throw NarrowingError{"Sign mismatch"};
     }
 
     // Return the casted value

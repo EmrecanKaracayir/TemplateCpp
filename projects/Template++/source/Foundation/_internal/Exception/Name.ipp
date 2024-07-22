@@ -66,7 +66,7 @@ namespace fn::_internal::Exception
   template <size length>
   constexpr Name<length>::Name(const cdef (&name)[length]) noexcept
   {
-    std::copy_n(name, length, std::span<cdef>{value}.begin());
+    std::ranges::copy_n(name, length, std::span<cdef>{value}.begin());
   }
 } // namespace fn::_internal::Exception
 

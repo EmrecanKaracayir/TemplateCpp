@@ -37,7 +37,7 @@ namespace fn::Utility
     // Log the exception
     std::cerr << message << '\n';
 
-    // NOLINTEND:(cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+    // NOLINTEND(cppcoreguidelines-pro-bounds-array-to-pointer-decay,
     // hicpp-no-array-decay)
 
 #pragma warning(pop)
