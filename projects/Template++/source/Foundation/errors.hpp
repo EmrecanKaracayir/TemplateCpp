@@ -8,8 +8,7 @@
 #define EXCEPTION fn::_internal::Exception::Exception
 #define NAME      fn::_internal::Exception::Name
 
-// NOLINTBEGIN(bugprone-throw-keyword-missing,
-// clang-diagnostic-ctad-maybe-unsupported)
+// NOLINTBEGIN(bugprone-throw-keyword-missing)
 
 namespace fn
 {
@@ -31,8 +30,7 @@ namespace fn
   using NarrowingError = EXCEPTION<NAME{"NarrowingError"}, unit>;
 } // namespace fn
 
-// NOLINTEND(bugprone-throw-keyword-missing,
-// clang-diagnostic-ctad-maybe-unsupported)
+// NOLINTEND(bugprone-throw-keyword-missing)
 
 // -----------------------------< Alias Macros >----------------------------- //
 #undef EXCEPTION

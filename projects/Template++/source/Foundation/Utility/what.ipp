@@ -14,7 +14,8 @@ namespace fn::Utility
    *           removed.
    * @return   The message of the exception.
    */
-  constexpr auto WHAT(const std::exception& exception) noexcept -> cstr;
+  [[nodiscard]] constexpr auto WHAT(const std::exception& exception
+  ) noexcept -> cstr;
 } // namespace fn::Utility
 
 /*----------------------------------------------------------------------------*\
@@ -23,7 +24,8 @@ namespace fn::Utility
 
 namespace fn::Utility
 {
-  constexpr auto WHAT(const std::exception& exception) noexcept -> cstr
+  [[nodiscard]] constexpr auto WHAT(const std::exception& exception
+  ) noexcept -> cstr
   {
 #pragma warning(push)
 #pragma warning(disable : 26'447)

@@ -1,6 +1,6 @@
 # *----------------------------------------------------------------------------*
 # |                       C++ Clang-Format Configuration                       |
-# |                              Version 24.07.21                              |
+# |                              Version 24.07.22                              |
 # *----------------------------------------------------------------------------*
 # | What is it?                                                                |
 # | It is a configuration file for Clang-Format, a formatting tool for C, C++, |
@@ -30,7 +30,7 @@
 # | Language     : YAML                                                        |
 # | C++ Standard : C++20                                                       |
 # | Author       : @EmrecanKaracayir                                           |
-# | Date         : 2024-07-21                                                  |
+# | Date         : 2024-07-22                                                  |
 # *----------------------------------------------------------------------------*
 ---
 BasedOnStyle: LLVM
@@ -109,7 +109,7 @@ BraceWrapping:
   SplitEmptyNamespace: false
 # BracedInitializerIndentWidth: // Unused (If unset ContinuationIndentWidth is used)
 BreakAdjacentStringLiterals: true
-BreakAfterAttributes: Always
+BreakAfterAttributes: Never
 # BreakAfterJavaFieldAnnotations: // Unused (Not C++)
 # BreakAfterReturnType:           // v19
 # BreakArrays                     // Unused (Not C++)

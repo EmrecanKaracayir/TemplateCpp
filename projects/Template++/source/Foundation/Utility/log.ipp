@@ -22,7 +22,8 @@ namespace fn::Utility
 
 namespace fn::Utility
 {
-  // NOLINTNEXTLINE(bugprone-exception-escape)
+  // NOLINTBEGIN(bugprone-exception-escape)
+
   inline auto elog(const auto& message) noexcept -> none
   {
     // Ensure that the stream is in a non-throwing state
@@ -42,6 +43,8 @@ namespace fn::Utility
 
 #pragma warning(pop)
   }
+
+  // NOLINTEND(bugprone-exception-escape)
 } // namespace fn::Utility
 
 /*----------------------------------------------------------------------------*\

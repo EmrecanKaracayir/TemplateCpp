@@ -17,7 +17,7 @@ namespace fn::Support
    * @attention Must be preferred over static_cast for narrowing conversions.
    */
   template <IsArithmetic To, IsArithmetic From>
-  constexpr auto narrow_cast(From value) -> To;
+  [[nodiscard]] constexpr auto narrow_cast(From value) -> To;
 
   /**
    * @brief     Implementation of Guidelines Support Library's @b narrow
@@ -30,7 +30,7 @@ namespace fn::Support
    * @attention Must be preferred over static_cast for narrowing conversions.
    */
   template <IsNonArithmetic To, IsNonArithmetic From>
-  constexpr auto narrow_cast(From value) -> To;
+  [[nodiscard]] constexpr auto narrow_cast(From value) -> To;
 } // namespace fn::Support
 
 /*----------------------------------------------------------------------------*\
@@ -43,7 +43,7 @@ namespace fn::Support
 #pragma warning(disable : 26'467 26'472)
 
   template <IsArithmetic To, IsArithmetic From>
-  constexpr auto narrow_cast(From value) -> To
+  [[nodiscard]] constexpr auto narrow_cast(From value) -> To
   {
     // Check if signedness is different
     constexpr fn::bln
@@ -69,13 +69,16 @@ namespace fn::Support
   }
 
   template <IsNonArithmetic To, IsNonArithmetic From>
-  constexpr auto narrow_cast(From value) -> To
+  [[nodiscard]] constexpr auto narrow_cast(From value) -> To
   {
     // Static cast the value
     const auto castedValue{static_cast<To>(value)};
 
     // Throw error if the value changed
-    if (static_cast<From>(castedValue) != value) { throw NarrowingError{}; }
+    if (static_cast<From>(castedValue) != value)
+    {
+      throw NarrowingError{"Value mismatch"};
+    }
 
     // Return the casted value
     return castedValue;

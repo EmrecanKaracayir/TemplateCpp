@@ -14,8 +14,6 @@
 
 namespace fn::_internal::Exception
 {
-  // NOLINTBEGIN(clang-diagnostic-ctad-maybe-unsupported)
-
   /**
    * @brief  A foundation class for exceptions.
    * @tparam name The name of the exception.
@@ -40,6 +38,8 @@ namespace fn::_internal::Exception
      * @param other Other exception to move from.
      */
     Exception(Exception&& other) noexcept = default;
+
+    Exception() noexcept = default;
 
     /**
      * @brief Constructs an exception without any message or context.
@@ -103,8 +103,7 @@ namespace fn::_internal::Exception
      * @brief   Accessor for the name of the exception.
      * @returns The name of the exception.
      */
-    [[nodiscard]]
-    auto what() const noexcept -> cstr override;
+    [[nodiscard]] auto what() const noexcept -> cstr override;
 
     /*------------------------------------------------------------------------*\
     *| [public]: Accessors                                                    |*
@@ -114,22 +113,22 @@ namespace fn::_internal::Exception
      * @brief   Accessor for the message of the exception.
      * @returns The message of the exception.
      */
-    [[nodiscard]]
-    auto getMessage() const noexcept -> const std::optional<std::string>&;
+    [[nodiscard]] auto getMessage() const noexcept
+      -> const std::optional<std::string>&;
 
     /**
      * @brief   Accessor for the context of the exception.
      * @returns The context of the exception.
      */
-    [[nodiscard]]
-    auto getContext() const noexcept -> const std::optional<Context>&;
+    [[nodiscard]] auto getContext() const noexcept
+      -> const std::optional<Context>&;
 
     /**
      * @brief   Accessor for the location of the exception.
      * @returns The location of the exception.
      */
-    [[nodiscard]]
-    auto getLocation() const noexcept -> const std::source_location&;
+    [[nodiscard]] auto getLocation() const noexcept
+      -> const std::source_location&;
 
   private:
     /*------------------------------------------------------------------------*\
@@ -193,7 +192,6 @@ namespace fn::_internal::Exception
     }
 
     // NOLINTEND(bugprone-exception-escape)
-    // NOLINTEND(clang-diagnostic-ctad-maybe-unsupported)
   };
 } // namespace fn::_internal::Exception
 
@@ -237,12 +235,18 @@ namespace fn::_internal::Exception
   \*--------------------------------------------------------------------------*/
 
   template <Name name, _internal::IsContext Context>
-  auto Exception<name, Context>::what() const noexcept -> cstr
+  [[nodiscard]] auto Exception<name, Context>::what() const noexcept -> cstr
   {
 #pragma warning(push)
 #pragma warning(disable : 26'485)
 
+    // NOLINTBEGIN(cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+    // hicpp-no-array-decay)
+
     return name.value;
+
+    // NOLINTEND(cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+    // hicpp-no-array-decay)
 
 #pragma warning(pop)
   }
@@ -252,24 +256,21 @@ namespace fn::_internal::Exception
   \*--------------------------------------------------------------------------*/
 
   template <Name name, _internal::IsContext Context>
-  [[nodiscard]]
-  auto Exception<name, Context>::getMessage() const noexcept
+  [[nodiscard]] auto Exception<name, Context>::getMessage() const noexcept
     -> const std::optional<std::string>&
   {
     return m_message;
   }
 
   template <Name name, _internal::IsContext Context>
-  [[nodiscard]]
-  auto Exception<name, Context>::getContext() const noexcept
+  [[nodiscard]] auto Exception<name, Context>::getContext() const noexcept
     -> const std::optional<Context>&
   {
     return m_context;
   }
 
   template <Name name, _internal::IsContext Context>
-  [[nodiscard]]
-  auto Exception<name, Context>::getLocation() const noexcept
+  [[nodiscard]] auto Exception<name, Context>::getLocation() const noexcept
     -> const std::source_location&
   {
     return m_location;
