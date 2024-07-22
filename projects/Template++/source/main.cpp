@@ -12,7 +12,7 @@ auto main() noexcept -> fn::idef
 try
 {
   // Print Hello World!
-  std::cout << "Hello World!\n";
+  std::cout << "Hello World!AA\n";
 
   // Return success
   return fn::EXIT_SUCCESS_CODE;
