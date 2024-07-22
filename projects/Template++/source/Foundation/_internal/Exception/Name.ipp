@@ -17,7 +17,6 @@ namespace fn::_internal::Exception
   template <size length>
   struct Name
   {
-  public:
     /*------------------------------------------------------------------------*\
     *| [public]: Constructors                                                 |*
     \*------------------------------------------------------------------------*/
@@ -31,19 +30,6 @@ namespace fn::_internal::Exception
      * @param name The C-style string.
      */
     constexpr explicit Name(const cdef (&name)[length]) noexcept;
-
-    /*------------------------------------------------------------------------*\
-    *| [public]: Destructor                                                   |*
-    \*------------------------------------------------------------------------*/
-
-    ~Name() noexcept = default;
-
-    /*------------------------------------------------------------------------*\
-    *| [public]: Operators                                                    |*
-    \*------------------------------------------------------------------------*/
-
-    auto operator=(const Name&) noexcept -> Name& = delete;
-    auto operator=(Name&&) noexcept -> Name&      = delete;
 
     /*------------------------------------------------------------------------*\
     *| [public]: Fields                                                       |*
