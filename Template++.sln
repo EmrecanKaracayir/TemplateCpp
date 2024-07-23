@@ -1,4 +1,5 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -6,14 +7,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Template++", "projects\Temp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D496856D-60C9-4BB2-A3E8-2D9116B31058}"
 	ProjectSection(SolutionItems) = preProject
-		.clang-format = .clang-format
 		.build.props = .build.props
+		.clang-format = .clang-format
 		.clang-tidy = .clang-tidy
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		README.md = README.md
+		.gitmodules = .gitmodules
 		LICENSE.md = LICENSE.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
