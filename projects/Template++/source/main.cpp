@@ -1,9 +1,9 @@
 #include "pch.hpp"
 
-#include "Foundation/constants.hpp"
-#include "Foundation/types.hpp"
-#include "Foundation/Utility/log.ipp"
-#include "Foundation/Utility/what.ipp"
+#include <Foundation/constants.hpp>
+#include <Foundation/types.hpp>
+#include <Foundation/Utility/log.ipp>
+#include <Foundation/Utility/what.ipp>
 
 #include <exception>
 #include <iostream>
