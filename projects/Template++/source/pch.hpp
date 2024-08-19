@@ -2,7 +2,7 @@
 
 // NOLINTBEGIN(misc-include-cleaner)
 
-// ------------------------------< Foundation >------------------------------ //
+// ----------------------------------------< Foundation >---------------------------------------- //
 
 // fn headers
 #include <Foundation/concepts.hpp>
