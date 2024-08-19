@@ -1,4 +1,5 @@
 <Solution>
+  <!-- Configurations -->
   <Configurations>
     <BuildType Name="Clang - Debug" />
     <BuildType Name="Clang - Release" />
@@ -7,6 +8,7 @@
     <Platform Name="ARM64" />
     <Platform Name="x64" />
   </Configurations>
+  <!-- Folders -->
   <Folder Name="/Solution Items/">
     <File Path=".build.props" />
     <File Path=".clang-format" />
@@ -18,8 +20,10 @@
     <File Path="LICENSE.md" />
     <File Path="README.md" />
   </Folder>
-  <Project Path="modules\LibFoundation++\projects\LibFoundation++\LibFoundation++.vcxproj" />
+  <!-- Projects -->
   <Project Path="projects\Template++\Template++.vcxproj" />
+  <Project Path="modules\LibFoundation++\projects\LibFoundation++\LibFoundation++.vcxproj" />
+  <!-- Properties -->
   <Properties Name="Visual Studio">
     <Property Name="OpenWith" Value="17" />
   </Properties>
