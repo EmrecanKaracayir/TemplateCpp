@@ -1,4 +1,8 @@
 <Solution>
+  <!-- Properties -->
+  <Properties Name="Visual Studio">
+    <Property Name="OpenWith" Value="17" />
+  </Properties>
   <!-- Configurations -->
   <Configurations>
     <BuildType Name="Clang - Debug" />
@@ -23,8 +27,4 @@
   <!-- Projects -->
   <Project Path="projects\Template++\Template++.vcxproj" />
   <Project Path="modules\LibFoundation++\projects\LibFoundation++\LibFoundation++.vcxproj" />
-  <!-- Properties -->
-  <Properties Name="Visual Studio">
-    <Property Name="OpenWith" Value="17" />
-  </Properties>
 </Solution>
